@@ -1,0 +1,486 @@
+@import '../styles.scss';
+
+.user-post {
+    display: flex;
+    gap: 64px;
+
+    .info {
+        width: 100%;
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+
+            .author-block {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+
+                p {
+                    height: 20px;
+                    margin: 0;
+
+                    &.author {
+                        @include body-3;
+                        color: $text-text-base;
+                    }
+
+                    &.date {
+                        @include body-3;
+                        color: $text-text-subdued;
+                    }
+                }
+            }
+
+            .delete-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+
+                svg {
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+
+        .text-info {
+            display: flex; // Встановлює гнучкий контейнер
+            flex-direction: column; // Встановлює напрямок розташування елементів по вертикалі (колонка)
+            gap: 8px; // Встановлює відстань між елементами в колонці
+
+            .title {
+                @include heading-2; // Використовує міксин heading-2 для стилізації заголовка
+                color: $text-text-base; // Встановлює колір тексту для заголовка
+            }
+
+            .text {
+                @include body-2; // Використовує міксин body-2 для стилізації основного тексту
+                color: $text-text-base; // Встановлює колір тексту для основного тексту
+            }
+        }
+
+        .actions {
+            @include body-3;
+            color: $text-text-base;
+            height: 40px;
+            padding: 16px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .tags {
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+
+                .tag {
+                    padding: 4px 12px;
+                    border-radius: 100px;
+                    border: 1px solid $stroke-stroke-based;
+                }
+            }
+
+            .icons {
+                display: flex;
+
+                .icon {
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    padding: 0px 8px;
+                    gap: 8px;
+
+                    p {
+                        @include body-3;
+                        color: $text-text-subdued;
+                    }
+
+                    &.other {
+                        padding: 0;
+                        width: 40px;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .image {
+        display: flex;
+        align-items: center;
+        min-width: 450px;
+        max-width: 450px;
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 16px;
+
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    .post {
+        display: flex;
+        gap: 64px;
+
+        .info {
+            width: 100%;
+
+            .author-info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 12px;
+
+                .author-block {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    img {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                    }
+
+                    p {
+                        height: 20px;
+                        margin: 0;
+
+                        &.author {
+                            @include body-3;
+                            color: $text-text-base;
+                        }
+
+                        &.date {
+                            @include body-3;
+                            color: $text-text-subdued;
+                        }
+                    }
+                }
+
+                .save-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            .text-info {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .title {
+                    @include heading-2;
+                    color: $text-text-base;
+                }
+
+                .text {
+                    @include body-2;
+                    color: $text-text-base;
+                }
+            }
+
+            .actions {
+                @include body-3;
+                color: $text-text-base;
+                height: 40px;
+                padding: 16px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .tags {
+                    display: flex;
+                    gap: 8px;
+                    flex-wrap: wrap;
+
+                    .tag {
+                        padding: 4px 12px;
+                        border-radius: 100px;
+                        border: 1px solid $stroke-stroke-based;
+                    }
+                }
+
+                .icons {
+                    display: flex;
+
+                    .icon {
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        padding: 0px 8px;
+                        gap: 8px;
+
+                        p {
+                            @include body-3;
+                            color: $text-text-subdued;
+                        }
+
+                        &.other {
+                            padding: 0;
+                            width: 40px;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .image {
+            display: flex;
+            align-items: center;
+            min-width: 260px;
+            max-width: 260px;
+
+            img {
+                width: 100%;
+                height: 136px;
+                object-fit: cover;
+                border-radius: 16px;
+
+            }
+        }
+    }
+
+
+
+    .popular-post {
+        .info {
+            display: flex;
+            flex-direction: column;
+
+            .author-info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .author-block {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                    }
+
+                    p {
+                        height: 20px;
+
+                        &.author {
+                            @include body-3;
+                            color: $text-text-base;
+                        }
+
+                        &.dot {
+                            display: flex;
+                            align-items: center;
+                            width: 4px;
+                            height: 4px;
+                            color: $icon-icon-subdued;
+                        }
+
+                        &.date {
+                            @include body-3;
+                            color: $text-text-subdued;
+                        }
+                    }
+                }
+
+                .save-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                }
+
+            }
+
+            .text-info {
+                .title {
+                    @include body-2;
+                    font-weight: 700;
+                    color: $text-text-base;
+                    margin-bottom: 8px;
+                }
+            }
+
+            .actions {
+                display: flex;
+                align-items: center;
+                height: 28px;
+                @include body-3;
+                color: $text-text-base;
+
+                .tags {
+                    display: flex;
+                    gap: 8px;
+                    flex-wrap: wrap;
+
+                    .tag {
+                        padding: 4px 12px;
+                        border-radius: 100px;
+                        border: 1px solid $stroke-stroke-based;
+                    }
+                }
+            }
+        }
+    }
+
+    .first-visit {
+        display: flex;
+        gap: 64px;
+
+        .info {
+            width: 100%;
+
+            .author-info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 12px;
+
+                .author-block {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    img {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                    }
+
+                    p {
+                        height: 20px;
+                        margin: 0;
+
+                        &.author {
+                            @include body-3;
+                            color: $text-text-base;
+                        }
+
+                        &.date {
+                            @include body-3;
+                            color: $text-text-subdued;
+                        }
+                    }
+                }
+
+                .save-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            .text-info {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .title {
+                    @include heading-2;
+                    color: $text-text-base;
+                    height: 64px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .text {
+                    @include body-2;
+                    color: $text-text-base;
+                    height: 96px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            .actions {
+                @include body-3;
+                color: $text-text-base;
+                height: 40px;
+                padding: 16px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .tags {
+                    display: flex;
+                    gap: 8px;
+                    flex-wrap: wrap;
+
+                    .tag {
+                        padding: 4px 12px;
+                        border-radius: 100px;
+                        border: 1px solid $stroke-stroke-based;
+                    }
+                }
+
+                .icons {
+                    display: flex;
+
+                    .icon {
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        padding: 0px 8px;
+                        gap: 8px;
+
+                        p {
+                            @include body-3;
+                            color: $text-text-subdued;
+                        }
+
+                        &.other {
+                            padding: 0;
+                            width: 40px;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .image {
+            display: flex;
+            align-items: center;
+            min-width: 260px;
+            max-width: 260px;
+
+            img {
+                width: 100%;
+                height: 136px;
+                object-fit: cover;
+                border-radius: 16px;
+
+            }
+        }
+    }
+}

@@ -10,23 +10,23 @@ function App() {
   const location = useLocation();
   const { pathname } = location;
   // Перевіряємо, чи користувач першій сторінці
-  const firstPage = pathname === "/falts/" || pathname === "/falts";
+  const firstPage = pathname === "/Falts-noDB/" || pathname === "/Falts-noDB";
   return (
     <>
       {/* Використовуємо компоненти маршрутизації для відображення відповідних компонентів для кожного шляху */}
       <Routes>
         {/* Компонент для першого відвідування */}
-        <Route path="/falts/" element={<FirstVisit />} />
+        <Route path="/Falts-noDB/" element={<FirstVisit />} />
         {/* Головна сторінка */}
-        <Route path="/falts/home" element={<Home />} />
+        <Route path="/Falts-noDB/home" element={<Home />} />
         {/* Сторінка з постами користувача */}
-        <Route path="/falts/userPosts" element={<UserPosts />} />
+        <Route path="/Falts-noDB/userPosts" element={<UserPosts />} />
         {/* Повний пост */}
-        <Route path="/falts/post/:id" element={<FullPost />} />
+        <Route path="/Falts-noDB/post/:id" element={<FullPost />} />
         {/* Сторінка для створення нового поста */}
-        <Route path="/falts/write" element={<CreatePost />} />
+        <Route path="/Falts-noDB/write" element={<CreatePost />} />
         {/* Сторінка для редагування існуючого поста */}
-        <Route path="/falts/edit/post/:id" element={<EditPost />} />
+        <Route path="/Falts-noDB/edit/post/:id" element={<EditPost />} />
       </Routes>
       {/* Відображаємо підвал, якщо користувач не першій сторінці */}
       {!firstPage && <footer />}

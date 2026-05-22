@@ -61,7 +61,7 @@ export const Header = ({ handleSearch }) => {
   return (
     <header>
       <nav className='nav-left'>
-        <Link to={'/falts/home'} style={{ textDecoration: 'none', height: '24px' }}>
+        <Link to={'/Falts-noDB/home'} style={{ textDecoration: 'none', height: '24px' }}>
           <LogoIcon />
         </Link>
         <div className='search'>
@@ -76,7 +76,7 @@ export const Header = ({ handleSearch }) => {
       </nav>
       {user ? (
         <nav className='nav-right'>
-          <Link to={'/falts/write'}>
+          <Link to={'/Falts-noDB/write'}>
             <li>
               <WriteIcon />
               <p>Писати</p>
@@ -109,7 +109,7 @@ export const Header = ({ handleSearch }) => {
               <div className='user-menu'>
                 <p onClick={handleCloseUserMenu}>{user?.fullName}</p>
                 <p onClick={handleCloseUserMenu}>
-                  <Link to={'/falts/userPosts'}> Moї Пости</Link>
+                  <Link to={'/Falts-noDB/userPosts'}> Moї Пости</Link>
                 </p>
                 <p onClick={logout}>Вийти</p>
               </div>

@@ -243,7 +243,7 @@ const updatePost = () => {
 
 
     if (redirect) {
-        return <Navigate to="/falts/" />;
+        return <Navigate to="/Falts-noDB/" />;
     }
 
     const handleAddTag = async () => {
@@ -365,7 +365,7 @@ const updatePost = () => {
         <>
             <header>
                 <nav className='nav-left'>
-                    <Link to={'/falts/'} style={{ textDecoration: 'none', height: '24px' }}>
+                    <Link to={'/Falts-noDB/'} style={{ textDecoration: 'none', height: '24px' }}>
                         <LogoIcon />
                     </Link>
                 </nav>

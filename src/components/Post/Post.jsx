@@ -35,7 +35,7 @@ export const Post = ({ id, title, date, text, image, user, tags }) => {
     const formattedDate = formatDate(date);
 
     return (
-        <Link to={`/falts/post/${id}`}>
+        <Link to={`/Falts-noDB/post/${id}`}>
             <div className='post' key={id}>
                 <div className='info'>
                     {user && (
@@ -93,7 +93,7 @@ export const PopularPost = ({ id, title, date, user, tags }) => {
     // Повертаємо JSX для відображення популярного поста
     return (
         // Посилання на конкретний пост за його id
-        <Link to={`/falts/post/${id}`}>
+        <Link to={`/Falts-noDB/post/${id}`}>
             <div className='popular-post'>
                 <div className='info'>
                     <div className='author-info'>
@@ -134,7 +134,7 @@ export const FirstVisitPost = ({ id, title, date, text, user, tags }) => {
     const firstTag = tags[0];
 
     return (
-        <Link to={`/falts/post/${id}`}>
+        <Link to={`/Falts-noDB/post/${id}`}>
             <div className='first-visit' key={id}>
                 <div className='info'>
                     {user && (
@@ -204,7 +204,7 @@ export const UserPost = ({ id, title, date, text, image, user, tags, onDelete })
                         </div>
                     </div>
                 )}
-                <Link to={`/falts/edit/post/${id}`}>
+                <Link to={`/Falts-noDB/edit/post/${id}`}>
                     <div className='text-info'>
                         <h3 className='title'>{title}</h3>
                         <div className='text' dangerouslySetInnerHTML={{ __html: truncateText2(text) }} />

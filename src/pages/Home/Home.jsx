@@ -212,7 +212,7 @@ export const Home = () => {
                                         id={post.id}
                                         tags={post.tags} />
                                     {currentUser && currentUser.id === post.user_id && (
-                                        <Link to={`/falts/write/${post.id}`} style={{ textDecoration: "none" }}>
+                                        <Link to={`/Falts-noDB/write/${post.id}`} style={{ textDecoration: "none" }}>
                                             <button>Edit</button>
                                         </Link>
                                     )}

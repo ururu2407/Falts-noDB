@@ -54,7 +54,7 @@ export const FirstVisit = () => {
     useEffect(() => {
         const isLoggedIn = localStorage.getItem('user');
         if (isLoggedIn) {
-            navigate('/falts/home'); // Replace with your target path
+            navigate('/Falts-noDB/home'); // Replace with your target path
         }
     }, [navigate]);
     return (
@@ -62,7 +62,7 @@ export const FirstVisit = () => {
             <div className='left-block'>
                 <div className='header'>
                     <nav className='nav-left'>
-                        <Link to={'/falts/home'} style={{ textDecoration: 'none', height: '24px' }}>
+                        <Link to={'/Falts-noDB/home'} style={{ textDecoration: 'none', height: '24px' }}>
                             <LogoIcon />
                         </Link>
                     </nav>
@@ -92,7 +92,7 @@ export const FirstVisit = () => {
                             Мрієте про власний блог? Тоді вам до нас! Найкраща платформа для блогів, яка допоможе вам створити та розвинути свій власний унікальний контент.
                         </p>
                     </div>
-                    <Link to={'/falts/home'}>
+                    <Link to={'/Falts-noDB/home'}>
                         <div className='btn'>
                             <p>Почати читати</p>
                             <ArrowRightIcon />

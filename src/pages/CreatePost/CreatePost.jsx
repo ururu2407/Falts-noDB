@@ -292,7 +292,7 @@ export const CreatePost = () => {
         setBlockIndex((prevIndex) => prevIndex - 1);
     };
     if (redirect) {
-        return <Navigate to="/falts/" />;
+        return <Navigate to="/Falts-noDB/" />;
     }
     const DrawerList = (
         <div className='drawer-list'>
@@ -386,7 +386,7 @@ export const CreatePost = () => {
         <>
             <header>
                 <nav className='nav-left'>
-                    <Link to={'/falts/'} style={{ textDecoration: 'none', height: '24px' }}>
+                    <Link to={'/Falts-noDB/'} style={{ textDecoration: 'none', height: '24px' }}>
                         <LogoIcon />
                     </Link>
                 </nav>

@@ -93,7 +93,7 @@ export const BackdropRegistertion = ({ open, onClick, account, onClose }) => {
                         <div className="field email">
                             <p>Електронна пошта</p>
                             <div className="input">
-                                <input type="text"
+                                <input type="email"
                                     placeholder='email@gmail.com'
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)} />
